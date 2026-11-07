@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nogueira Consultoria Jurídica - Defesa técnica contra Busca e Apreensão de Veículos e Revisional de Contratos Bancários. Atendimento especializado e ágil.">
+    <title>Nogueira Consultoria Jurídica | Defesa em Busca e Apreensão</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            900: '#0b141e',
+                            800: '#111e2e',
+                            700: '#192a3a',
+                            600: '#23374b',
+                            500: '#2f465e'
+                        },
+                        gold: {
+                            300: '#f5dfa3',
+                            400: '#e5be70',
+                            500: '#c5a059',
+                            600: '#a6803b',
+                            700: '#846227'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Cinzel', 'Playfair Display', 'Georgia', 'serif'],
+                        sans: ['Montserrat', 'Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* Gradientes e Texturas inspiradas no Cartão */
+        .bg-navy-pattern {
+            background-color: #111e2e;
+            background-image: radial-gradient(#23374b 0.75px, transparent 0.75px), radial-gradient(#23374b 0.75px, #111e2e 0.75px);
+            background-size: 30px 30px;
+            background-position: 0 0, 15px 15px;
+        }
+
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #f5dfa3 0%, #c5a059 50%, #846227 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gold-gradient-bg {
+            background: linear-gradient(135deg, #e5be70 0%, #c5a059 50%, #a6803b 100%);
+        }
+
+        .gold-gradient-bg-hover:hover {
+            background: linear-gradient(135deg, #f5dfa3 0%, #e5be70 50%, #c5a059 100%);
+        }
+
+        .gold-border-glow {
+            border: 1px solid rgba(197, 160, 89, 0.3);
+            box-shadow: 0 0 15px rgba(197, 160, 89, 0.08);
+        }
+
+        .gold-border-glow:hover {
+            border-color: rgba(197, 160, 89, 0.7);
+            box-shadow: 0 0 20px rgba(197, 160, 89, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-navy-900 text-gray-200 font-sans antialiased selection:bg-gold-500 selection:text-navy-900">
+
+    <!-- DEFESAS GLOBAIS DE SVG PARA O EMBLEMA DO CARTÃO -->
+    <svg style="display: none;">
+        <defs>
+            <linearGradient id="cardGoldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#fcedc7" />
+                <stop offset="35%" stop-color="#e5be70" />
+                <stop offset="70%" stop-color="#c5a059" />
+                <stop offset="100%" stop-color="#7a5a21" />
+            </linearGradient>
+            <linearGradient id="cardNavyGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#233b54" />
+                <stop offset="100%" stop-color="#121f2d" />
+            </linearGradient>
+            <filter id="goldGlow" x="-20%" y="-20%" width="140%" height="140%">
+                <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000000" flood-opacity="0.6"/>
+            </filter>
+        </defs>
+    </svg>
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-navy-900/95 backdrop-blur-md border-b border-gold-500/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                
+                <!-- LOGO COMPLETO COM EMBLEMA FIDEDIGNO AO CARTÃO DE VISITA -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-12 h-14 relative flex items-center justify-center">
+                        <svg class="w-full h-full filter drop-shadow-md" viewBox="0 0 120 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Brasão de Fundo Dourado Trabalhado -->
+                            <path d="M60 8 L102 32 Q106 72 60 130 Q14 72 18 32 Z" fill="url(#cardGoldGradient)" stroke="#846227" stroke-width="2"/>
+                            <!-- Recorte Interno Texturizado -->
+                            <path d="M60 16 L94 36 Q97 70 60 120 Q23 70 26 36 Z" fill="url(#cardNavyGradient)" stroke="url(#cardGoldGradient)" stroke-width="1.5"/>
+                            
+                            <!-- Balança Esquerda -->
+                            <g fill="none" stroke="url(#cardGoldGradient)" stroke-width="2.2" stroke-linecap="round">
+                                <line x1="22" y1="58" x2="44" y2="58"/>
+                                <line x1="33" y1="58" x2="24" y2="76"/>
+                                <line x1="33" y1="58" x2="42" y2="76"/>
+                                <path d="M20 76 Q33 83 46 76" fill="url(#cardGoldGradient)" fill-opacity="0.2"/>
+                            </g>
+
+                            <!-- Balança Direita -->
+                            <g fill="none" stroke="url(#cardGoldGradient)" stroke-width="2.2" stroke-linecap="round">
+                                <line x1="76" y1="58" x2="98" y2="58"/>
+                                <line x1="87" y1="58" x2="78" y2="76"/>
+                                <line x1="87" y1="58" x2="96" y2="76"/>
+                                <path d="M74 76 Q87 83 100 76" fill="url(#cardGoldGradient)" fill-opacity="0.2"/>
+                            </g>
+
+                            <!-- Monograma 'N' Estilizado em Sobreposição -->
+                            <path d="M42 42 L42 98 M42 42 L78 98 M78 42 L78 98" 
+                                  stroke="url(#cardGoldGradient)" 
+                                  stroke-width="7" 
+                                  stroke-linecap="round" 
+                                  stroke-linejoin="round"
+                                  filter="url(#goldGlow)"/>
+                            <path d="M42 42 L42 98 M42 42 L78 98 M78 42 L78 98" 
+                                  stroke="#192a3a" 
+                                  stroke-width="2.5" 
+                                  stroke-linecap="round" 
+                                  stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <!-- Nome do Escritório -->
+                    <div class="flex flex-col">
+                        <span class="font-serif text-xl sm:text-2xl font-bold tracking-wider gold-gradient-text uppercase">Nogueira</span>
+                        <span class="font-serif text-xs sm:text-sm tracking-widest text-gray-300 font-medium uppercase -mt-1">Consultoria Jurídica</span>
+                    </div>
+                </a>
+
+                <!-- NAV LINKS (DESKTOP) -->
+                <nav class="hidden lg:flex items-center space-x-8 text-sm font-medium">
+                    <a href="#sobre" class="text-gray-300 hover:text-gold-400 transition-colors">O Escritório</a>
+                    <a href="#especialidades" class="text-gray-300 hover:text-gold-400 transition-colors">Atuação</a>
+                    <a href="#como-funciona" class="text-gray-300 hover:text-gold-400 transition-colors">Como Funciona</a>
+                    <a href="#faq" class="text-gray-300 hover:text-gold-400 transition-colors">Dúvidas</a>
+                </nav>
+
+                <!-- CTA WHATSAPP (DESKTOP) -->
+                <div class="hidden lg:flex items-center">
+                    <a href="https://wa.me/5581992913589?text=Ol%C3%A1%2C%20preciso%20de%20orienta%C3%A7%C3%A3o%20urgente%20sobre%20Busca%20e%20Apreens%C3%A3o%20do%20meu%20ve%C3%ADculo." 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       class="gold-gradient-bg gold-gradient-bg-hover text-navy-900 font-bold px-6 py-2.5 rounded-md shadow-lg flex items-center gap-2 transition-all duration-300 transform hover:-translate-y-0.5">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Falar com Advogado</span>
+                    </a>
+                </div>
+
+                <!-- HAMBURGER MENU (MOBILE) -->
+                <div class="lg:hidden flex items-center">
+                    <button id="mobileMenuBtn" aria-label="Abrir Menu" class="text-gold-400 hover:text-gold-300 focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- MOBILE MENU DROPDOWN -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-navy-800 border-b border-gold-500/20 px-4 pt-2 pb-6 space-y-4">
+            <a href="#sobre" class="block text-gray-300 hover:text-gold-400 py-2 border-b border-gray-700/50">O Escritório</a>
+            <a href="#especialidades" class="block text-gray-300 hover:text-gold-400 py-2 border-b border-gray-700/50">Atuação</a>
+            <a href="#como-funciona" class="block text-gray-300 hover:text-gold-400 py-2 border-b border-gray-700/50">Como Funciona</a>
+            <a href="#faq" class="block text-gray-300 hover:text-gold-400 py-2 border-b border-gray-700/50">Dúvidas</a>
+            <a href="https://wa.me/5581992913589?text=Ol%C3%A1%2C%20preciso%20de%20orienta%C3%A7%C3%A3o%20urgente%20sobre%20Busca%20e%20Apreens%C3%A3o%20do%20meu%20ve%C3%ADculo." 
+               target="_blank" 
+               rel="noopener noreferrer"
+               class="gold-gradient-bg text-navy-900 font-bold px-4 py-3 rounded-md shadow flex items-center justify-center gap-2 w-full mt-4">
+                <i class="fa-brands fa-whatsapp text-lg"></i>
+                <span>Atendimento Prioritário no WhatsApp</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- ================= HERO SECTION ================= -->
+    <section class="relative pt-32 pb-20 md:pt-40 md:pb-28 bg-navy-pattern overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-navy-900/50 to-navy-900 pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- COLUNA ESQUERDA: TEXTO & CTA -->
+                <div class="lg:col-span-7 text-center lg:text-left">
+                    
+                    <!-- BADGE URGÊNCIA -->
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-950/80 border border-red-500/40 text-red-300 text-xs sm:text-sm font-semibold mb-6 animate-pulse">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        <span>Notificado de Busca e Apreensão? O prazo para defesa é extremamente curto.</span>
+                    </div>
+
+                    <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-tight mb-6">
+                        Proteja seu Veículo com <span class="gold-gradient-text">Defesa Técnica Especializada</span>
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-gray-300 mb-8 leading-relaxed font-light">
+                        Se o banco deu entrada em um processo de Busca e Apreensão contra seu patrimônio, nós atuamos com agilidade para suspender liminares, identificar juros abusivos e renegociar seu contrato em condições justas.
+                    </p>
+
+                    <!-- BOTÕES DE AÇÃO -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-10">
+                        <a href="https://wa.me/5581992913589?text=Ol%C3%A1%2C%20recebi%20um%20aviso%20de%20busca%20e%20apreens%C3%A3o%20e%20preciso%20da%20an%C3%A1lise%20urgente%20do%20meu%20caso." 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           class="gold-gradient-bg gold-gradient-bg-hover text-navy-900 font-bold px-8 py-4 rounded-md shadow-2xl text-base sm:text-lg flex items-center justify-center gap-3 w-full sm:w-auto transition-all duration-300 transform hover:-translate-y-1">
+                            <i class="fa-brands fa-whatsapp text-2xl"></i>
+                            <span>Analisar Meu Caso Gratuitamente</span>
+                        </a>
+
+                        <a href="#sobre" class="w-full sm:w-auto px-6 py-4 rounded-md border border-gold-500/40 text-gold-300 hover:bg-gold-500/10 font-semibold text-center transition-all">
+                            Saiba Mais
+                        </a>
+                    </div>
+
+                    <!-- BENEFÍCIOS RÁPIDOS -->
+                    <div class="grid grid-cols-3 gap-4 pt-6 border-t border-gold-500/20">
+                        <div class="text-center lg:text-left">
+                            <span class="block font-serif text-xl sm:text-2xl font-bold text-gold-400">100%</span>
+                            <span class="text-xs text-gray-400">Sigiloso e Seguro</span>
+                        </div>
+                        <div class="text-center lg:text-left">
+                            <span class="block font-serif text-xl sm:text-2xl font-bold text-gold-400">Imediata</span>
+                            <span class="text-xs text-gray-400">Análise Processual</span>
+                        </div>
+                        <div class="text-center lg:text-left">
+                            <span class="block font-serif text-xl sm:text-2xl font-bold text-gold-400">OAB/PE</span>
+                            <span class="text-xs text-gray-400">Registro Oficial</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- COLUNA DIREITA: CARD DE SEGURANÇA E REGISTRO -->
+                <div class="lg:col-span-5">
+                    <div class="bg-navy-800 rounded-xl p-6 sm:p-8 gold-border-glow relative">
+                        <div class="absolute -top-4 right-6 bg-gold-500 text-navy-900 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded">
+                            Defesa Garantida
+                        </div>
+
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-14 h-16 relative flex items-center justify-center shrink-0">
+                                <svg class="w-full h-full filter drop-shadow-md" viewBox="0 0 120 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M60 8 L102 32 Q106 72 60 130 Q14 72 18 32 Z" fill="url(#cardGoldGradient)" stroke="#846227" stroke-width="2"/>
+                                    <path d="M60 16 L94 36 Q97 70 60 120 Q23 70 26 36 Z" fill="url(#cardNavyGradient)" stroke="url(#cardGoldGradient)" stroke-width="1.5"/>
+                                    <g fill="none" stroke="url(#cardGoldGradient)" stroke-width="2.2" stroke-linecap="round">
+                                        <line x1="22" y1="58" x2="44" y2="58"/>
+                                        <line x1="33" y1="58" x2="24" y2="76"/>
+                                        <line x1="33" y1="58" x2="42" y2="76"/>
+                                        <path d="M20 76 Q33 83 46 76" fill="url(#cardGoldGradient)" fill-opacity="0.2"/>
+                                        <line x1="76" y1="58" x2="98" y2="58"/>
+                                        <line x1="87" y1="58" x2="78" y2="76"/>
+                                        <line x1="87" y1="58" x2="96" y2="76"/>
+                                        <path d="M74 76 Q87 83 100 76" fill="url(#cardGoldGradient)" fill-opacity="0.2"/>
+                                    </g>
+                                    <path d="M42 42 L42 98 M42 42 L78 98 M78 42 L78 98" stroke="url(#cardGoldGradient)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M42 42 L42 98 M42 42 L78 98 M78 42 L78 98" stroke="#192a3a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h2 class="font-serif text-lg font-bold text-white">Nogueira Consultoria</h2>
+                                <p class="text-xs text-gold-400 font-semibold">Atendimento Jurídico Especializado</p>
+                            </div>
+                        </div>
+
+                        <ul class="space-y-4 text-sm text-gray-300 mb-8">
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-gold-400 mt-1"></i>
+                                <span>Verificação técnica de irregularidades na notificação extrajudicial do banco.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-gold-400 mt-1"></i>
+                                <span>Defesa urgente para pedir a revogação ou suspensão do mandado de busca.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-gold-400 mt-1"></i>
+                                <span>Negociação direta com o banco para quitação com abatimento expressivo.</span>
+                            </li>
+                        </ul>
+
+                        <div class="bg-navy-900/80 p-4 rounded-lg border border-gold-500/20 text-xs space-y-1 text-gray-400">
+                            <p class="text-gray-300 font-semibold mb-1">Dados de Validação Oficial:</p>
+                            <p><strong class="text-gold-400">CNPJ:</strong> 55.294.742/0001-69</p>
+                            <p><strong class="text-gold-400">OAB/PE:</strong> 41.194</p>
+                            <p><strong class="text-gold-400">Localização:</strong> Paulista / Recife - PE</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SEÇÃO CREDIBILIDADE & SOBRE ================= -->
+    <section id="sobre" class="py-20 bg-navy-800 border-y border-gold-500/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                
+                <div>
+                    <span class="text-gold-400 font-semibold text-xs tracking-widest uppercase">Transparência & Autoridade</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mt-2 mb-6">
+                        Compromisso com a Proteção do Seu Patrimônio
+                    </h2>
+                    <p class="text-gray-300 leading-relaxed mb-4">
+                        A <strong>Nogueira Consultoria Jurídica</strong> atua de forma firme e transparente na defesa dos direitos do consumidor e devedor contra abusividades cometidas por instituições financeiras.
+                    </p>
+                    <p class="text-gray-300 leading-relaxed mb-6">
+                        Sabemos que o recebimento de um aviso de Busca e Apreensão gera extrema apreensão. Por isso, oferecemos uma análise célere do processo, verificando se a instituição financeira cumpriu todos os requisitos legais exigidos pelo Superior Tribunal de Justiça (STJ).
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-4 my-6">
+                        <div class="p-4 bg-navy-900 rounded border border-gold-500/20">
+                            <i class="fa-solid fa-scale-balanced text-gold-400 text-xl mb-2"></i>
+                            <h3 class="font-serif font-bold text-white text-sm">Atuação Pautada na OAB</h3>
+                            <p class="text-xs text-gray-400">Rigidez ética e total respeito às normas jurídicas.</p>
+                        </div>
+                        <div class="p-4 bg-navy-900 rounded border border-gold-500/20">
+                            <i class="fa-solid fa-user-shield text-gold-400 text-xl mb-2"></i>
+                            <h3 class="font-serif font-bold text-white text-sm">Sigilo Absoluto</h3>
+                            <p class="text-xs text-gray-400">Seus dados e informações contratuais protegidos.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="bg-navy-900 p-8 rounded-xl gold-border-glow space-y-6">
+                        <div class="border-b border-gold-500/20 pb-4">
+                            <h3 class="font-serif text-xl font-bold gold-gradient-text">Ficha Institucional</h3>
+                            <p class="text-xs text-gray-400">Informações públicas para verificação de idoneidade</p>
+                        </div>
+
+                        <div class="space-y-4 text-sm">
+                            <div class="flex justify-between items-center py-2 border-b border-gray-800">
+                                <span class="text-gray-400">Razão Social:</span>
+                                <span class="text-white font-medium">Nogueira Consultoria Jurídica</span>
+                            </div>
+                            <div class="flex justify-between items-center py-2 border-b border-gray-800">
+                                <span class="text-gray-400">CNPJ:</span>
+                                <span class="text-gold-400 font-mono font-semibold">55.294.742/0001-69</span>
+                            </div>
+                            <div class="flex justify-between items-center py-2 border-b border-gray-800">
+                                <span class="text-gray-400">Registro OAB:</span>
+                                <span class="text-gold-400 font-mono font-semibold">OAB/PE 41.194</span>
+                            </div>
+                            <div class="flex justify-between items-center py-2 border-b border-gray-800">
+                                <span class="text-gray-400">Responsável Técnico:</span>
+                                <span class="text-white font-medium">Dr. João Paulo Nogueira</span>
+                            </div>
+                            <div class="flex justify-between items-center py-2">
+                                <span class="text-gray-400">Endereço Registrado:</span>
+                                <span class="text-white font-medium text-right text-xs">Janga, Paulista - PE</span>
+                            </div>
+                        </div>
+
+                        <a href="https://wa.me/5581992913589?text=Ol%C3%A1%2C%20gostaria%20de%20confirmar%20as%20informA%C3%A7%C3%B5es%20e%20solicitar%20atendimento." 
+                           target="_blank"
+                           class="w-full py-3 rounded bg-navy-700 hover:bg-navy-600 border border-gold-500/40 text-gold-300 font-semibold text-center block text-sm transition-colors">
+                            <i class="fa-brands fa-whatsapp mr-2"></i> Solicitar Validação no WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= ESPECIALIDADES / CARDS ================= -->
+    <section id="especialidades" class="py-20 bg-navy-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            
+            <span class="text-gold-400 font-semibold text-xs tracking-widest uppercase">Áreas de Atuação</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mt-2 mb-4">
+                Soluções Jurídicas Estratégicas
+            </h2>
+            <p class="text-gray-400 max-w-2xl mx-auto mb-16 text-sm sm:text-base">
+                Foco especializado em contencioso bancário, defesa da propriedade e renegociação de dívidas veiculares.
+            </p>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- CARD 1 -->
+                <div class="bg-navy-800 p-6 rounded-lg gold-border-glow text-left flex flex-col justify-between transition-all duration-300 hover:-translate-y-2">
+                    <div>
+                        <div class="w-12 h-12 rounded-lg bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 text-xl mb-4">
+                            <i class="fa-solid fa-car-burst"></i>
+                        </div>
+                        <h3 class="font-serif text-lg font-bold text-white mb-2">Defesa em Busca e Apreensão</h3>
+                        <p class="text-xs text-gray-300 leading-relaxed">
+                            Intervenção rápida para impugnar notificação inválida, contestar a liminar e suspender a ordem de apreensão do veículo.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/5581992913589?text=Quero%20saber%20mais%20sobre%20Defesa%20em%20Busca%20e%20Apreens%C3%A3o." target="_blank" class="mt-6 text-xs font-bold text-gold-400 hover:text-gold-300 flex items-center gap-1">
+                        Saber mais <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </a>
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="bg-navy-800 p-6 rounded-lg gold-border-glow text-left flex flex-col justify-between transition-all duration-300 hover:-translate-y-2">
+                    <div>
+                        <div class="w-12 h-12 rounded-lg bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 text-xl mb-4">
+                            <i class="fa-solid fa-file-invoice-dollar"></i>
+                        </div>
+                        <h3 class="font-serif text-lg font-bold text-white mb-2">Análise de Abusividade Bancária</h3>
+                        <p class="text-xs text-gray-300 leading-relaxed">
+                            Perícia minuciosa do contrato de financiamento para identificar tarifas ilegais, juros capitalizados acima da taxa média e venda casada.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/5581992913589?text=Quero%20uma%20An%C3%A1lise%20de%20Abusividade%20no%20meu%20contrato." target="_blank" class="mt-6 text-xs font-bold text-gold-400 hover:text-gold-300 flex items-center gap-1">
+                        Saber mais <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </a>
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="bg-navy-800 p-6 rounded-lg gold-border-glow text-left flex flex-col justify-between transition-all duration-300 hover:-translate-y-2">
+                    <div>
+                        <div class="w-12 h-12 rounded-lg bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 text-xl mb-4">
+                            <i class="fa-solid fa-handshake-simple"></i>
+                        </div>
+                        <h3 class="font-serif text-lg font-bold text-white mb-2">Renegociação de Dívidas</h3>
+                        <p class="text-xs text-gray-300 leading-relaxed">
+                            Intermediação técnica com a assessoria do banco visando acordos extrajudiciais ou judiciais vantajosos para quitação do contrato.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/5581992913589?text=Preciso%20renegociar%20a%20d%C3%ADvida%20do%20meu%20financiamento." target="_blank" class="mt-6 text-xs font-bold text-gold-400 hover:text-gold-300 flex items-center gap-1">
+                        Saber mais <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </a>
+                </div>
+
+                <!-- CARD 4 -->
+                <div class="bg-navy-800 p-6 rounded-lg gold-border-glow text-left flex flex-col justify-between transition-all duration-300 hover:-translate-y-2">
+                    <div>
+                        <div class="w-12 h-12 rounded-lg bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 text-xl mb-4">
+                            <i class="fa-solid fa-building-columns"></i>
+                        </div>
+                        <h3 class="font-serif text-lg font-bold text-white mb-2">Proteção Patrimonial</h3>
+                        <p class="text-xs text-gray-300 leading-relaxed">
+                            Orientação jurídica preventiva para resguardar bens de medidas expropriatórias e constrições judiciais indevidas.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/5581992913589?text=Gostaria%20de%20consultoria%20em%20Prote%C3%A7%C3%A3o%20Patrimonial." target="_blank" class="mt-6 text-xs font-bold text-gold-400 hover:text-gold-300 flex items-center gap-1">
+                        Saber mais <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= COMO FUNCIONA (PASSO A PASSO) ================= -->
+    <section id="como-funciona" class="py-20 bg-navy-800 border-t border-gold-500/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-gold-400 font-semibold text-xs tracking-widest uppercase">Fluxo de Atendimento</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mt-2">
+                    Como Funciona a Sua Defesa
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 relative">
+                
+                <!-- PASSO 1 -->
+                <div class="bg-navy-900 p-8 rounded-xl border border-gold-500/20 relative z-10 text-center">
+                    <div class="w-16 h-16 rounded-full gold-gradient-bg text-navy-900 font-serif font-bold text-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                        1
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-white mb-3">Análise Processual</h3>
+                    <p class="text-sm text-gray-300 leading-relaxed">
+                        Identificamos a distribuição da ação no sistema do tribunal e analisamos a validade da notificação enviada pelo banco.
+                    </p>
+                </div>
+
+                <!-- PASSO 2 -->
+                <div class="bg-navy-900 p-8 rounded-xl border border-gold-500/20 relative z-10 text-center">
+                    <div class="w-16 h-16 rounded-full gold-gradient-bg text-navy-900 font-serif font-bold text-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                        2
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-white mb-3">Estratégia de Defesa</h3>
+                    <p class="text-sm text-gray-300 leading-relaxed">
+                        Elaboramos a contestação e o pedido de revogação da liminar com base nos erros formais e abusividades contratuais.
+                    </p>
+                </div>
+
+                <!-- PASSO 3 -->
+                <div class="bg-navy-900 p-8 rounded-xl border border-gold-500/20 relative z-10 text-center">
+                    <div class="w-16 h-16 rounded-full gold-gradient-bg text-navy-900 font-serif font-bold text-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                        3
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-white mb-3">Acordo ou Julgamento</h3>
+                    <p class="text-sm text-gray-300 leading-relaxed">
+                        Buscamos a manutenção da posse do seu veículo e a negociação do saldo devedor com abatimento de tarifas ilegais.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="mt-12 text-center">
+                <a href="https://wa.me/5581992913589?text=Quero%20iniciar%20o%20passo%201%3A%20An%C3%A1lise%20Gratuita%20do%20meu%20Processo." 
+                   target="_blank"
+                   class="inline-flex items-center gap-3 gold-gradient-bg gold-gradient-bg-hover text-navy-900 font-bold px-8 py-4 rounded-md shadow-xl text-base transition-all transform hover:-translate-y-0.5">
+                    <i class="fa-brands fa-whatsapp text-xl"></i>
+                    <span>Iniciar Análise com Advogado</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FAQ (ACCORDION INTERATIVO) ================= -->
+    <section id="faq" class="py-20 bg-navy-900">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-gold-400 font-semibold text-xs tracking-widest uppercase">Tire suas dúvidas</span>
+                <h2 class="font-serif text-3xl font-bold text-white mt-2">Perguntas Frequentes</h2>
+            </div>
+
+            <div class="space-y-4">
+                
+                <!-- FAQ 1 -->
+                <div class="bg-navy-800 rounded-lg border border-gold-500/20 overflow-hidden">
+                    <button class="faq-toggle w-full p-5 text-left font-serif font-bold text-white flex justify-between items-center focus:outline-none">
+                        <span>O Oficial de Justiça já pode levar meu carro imediatamente?</span>
+                        <i class="fa-solid fa-chevron-down text-gold-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden p-5 pt-0 text-sm text-gray-300 border-t border-navy-700 leading-relaxed">
+                        Se houver uma liminar deferida pelo juiz, sim. No entanto, o banco precisa cumprir requisitos rigorosos de notificação prévia. Caso existam falhas na notificação ou no contrato, a defesa técnica pode requerer a suspensão da medida e a restituição do bem.
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="bg-navy-800 rounded-lg border border-gold-500/20 overflow-hidden">
+                    <button class="faq-toggle w-full p-5 text-left font-serif font-bold text-white flex justify-between items-center focus:outline-none">
+                        <span>Qual é o prazo para apresentar a defesa após a apreensão?</span>
+                        <i class="fa-solid fa-chevron-down text-gold-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden p-5 pt-0 text-sm text-gray-300 border-t border-navy-700 leading-relaxed">
+                        O prazo legal é extremamente curto: 5 dias para pagar a dívida apontada ou 15 dias para apresentar a contestação técnica. Por isso, a reação deve ser imediata assim que tomar conhecimento.
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="bg-navy-800 rounded-lg border border-gold-500/20 overflow-hidden">
+                    <button class="faq-toggle w-full p-5 text-left font-serif font-bold text-white flex justify-between items-center focus:outline-none">
+                        <span>Como posso ter certeza de que este contato é seguro?</span>
+                        <i class="fa-solid fa-chevron-down text-gold-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden p-5 pt-0 text-sm text-gray-300 border-t border-navy-700 leading-relaxed">
+                        Nosso escritório opera sob o CNPJ oficial 55.294.742/0001-69 e registro profissional na OAB/PE nº 41.194. Todos os nossos dados podem ser verificados publicamente no cadastro da Ordem dos Advogados do Brasil e na Receita Federal.
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="bg-navy-800 rounded-lg border border-gold-500/20 overflow-hidden">
+                    <button class="faq-toggle w-full p-5 text-left font-serif font-bold text-white flex justify-between items-center focus:outline-none">
+                        <span>É possível conseguir desconto para quitar o veículo?</span>
+                        <i class="fa-solid fa-chevron-down text-gold-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden p-5 pt-0 text-sm text-gray-300 border-t border-navy-700 leading-relaxed">
+                        Sim. Ao apontar as abusividades do contrato e demonstrar as fragilidades do processo do banco através da defesa jurídica, abrem-se margens expressivas para negociação extrajudicial do saldo devedor.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= RODAPÉ INSTITUCIONAL ================= -->
+    <footer class="bg-navy-950 border-t border-gold-500/20 pt-16 pb-12 text-gray-400 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+                
+                <!-- COLUNA 1: LOGO E SOBRE -->
+                <div class="md:col-span-2 space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-12">
+                            <svg class="w-full h-full filter drop-shadow" viewBox="0 0 120 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M60 8 L102 32 Q106 72 60 130 Q14 72 18 32 Z" fill="url(#cardGoldGradient)" stroke="#846227" stroke-width="2"/>
+                                <path d="M60 16 L94 36 Q97 70 60 120 Q23 70 26 36 Z" fill="url(#cardNavyGradient)" stroke="url(#cardGoldGradient)" stroke-width="1.5"/>
+                                <g fill="none" stroke="url(#cardGoldGradient)" stroke-width="2" stroke-linecap="round">
+                                    <line x1="22" y1="58" x2="44" y2="58"/>
+                                    <line x1="33" y1="58" x2="24" y2="76"/>
+                                    <line x1="33" y1="58" x2="42" y2="76"/>
+                                    <line x1="76" y1="58" x2="98" y2="58"/>
+                                    <line x1="87" y1="58" x2="78" y2="76"/>
+                                    <line x1="87" y1="58" x2="96" y2="76"/>
+                                </g>
+                                <path d="M42 42 L42 98 M42 42 L78 98 M78 42 L78 98" stroke="url(#cardGoldGradient)" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M42 42 L42 98 M42 42 L78 98 M78 42 L78 98" stroke="#192a3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <span class="font-serif text-lg font-bold text-white block leading-none">NOGUEIRA</span>
+                            <span class="text-xs tracking-widest text-gold-400 uppercase">Consultoria Jurídica</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-400 leading-relaxed pr-4">
+                        Escritório de advocacia especializado em Direito Bancário, defesa técnica em Ações de Busca e Apreensão e Proteção Patrimonial.
+                    </p>
+                    <div class="text-xs text-gray-400 space-y-1">
+                        <p><strong class="text-white">CNPJ:</strong> 55.294.742/0001-69</p>
+                        <p><strong class="text-white">Registro Profissional:</strong> OAB/PE 41.194</p>
+                    </div>
+                </div>
+
+                <!-- COLUNA 2: CONTATO -->
+                <div>
+                    <h4 class="font-serif font-bold text-white mb-4 text-base">Contato Directo</h4>
+                    <ul class="space-y-3 text-xs">
+                        <li class="flex items-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-gold-400"></i>
+                            <a href="https://wa.me/5581992913589" target="_blank" class="hover:text-white transition-colors">(81) 99291-3589</a>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-regular fa-envelope text-gold-400"></i>
+                            <a href="mailto:jpnogueira1981@gmail.com" class="hover:text-white transition-colors">jpnogueira1981@gmail.com</a>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-location-dot text-gold-400 mt-0.5"></i>
+                            <span>Rua Djalma Dutra, nº 771, Janga, Paulista – PE</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- COLUNA 3: LINKS ÚTEIS -->
+                <div>
+                    <h4 class="font-serif font-bold text-white mb-4 text-base">Navegação</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#sobre" class="hover:text-gold-400 transition-colors">Sobre o Escritório</a></li>
+                        <li><a href="#especialidades" class="hover:text-gold-400 transition-colors">Áreas de Atuação</a></li>
+                        <li><a href="#como-funciona" class="hover:text-gold-400 transition-colors">Como Funciona a Defesa</a></li>
+                        <li><a href="#faq" class="hover:text-gold-400 transition-colors">Perguntas Frequentes</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- COPYRIGHT -->
+            <div class="border-t border-navy-800 pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-500 gap-4">
+                <p>&copy; 2026 Nogueira Consultoria Jurídica. Todos os direitos reservados.</p>
+                <p class="text-[11px]">Conforme o Código de Ética e Disciplina da OAB.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOTÃO FLUTUANTE DO WHATSAPP -->
+    <a href="https://wa.me/5581992913589?text=Ol%C3%A1%2C%20preciso%20de%20atendimento%20urgente%20sobre%20Busca%20e%20Apreens%C3%A3o." 
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="Atendimento via WhatsApp"
+       class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-green-500 hover:bg-green-600 text-white rounded-full flex items-center justify-center shadow-2xl transition-all duration-300 transform hover:scale-110">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+    </a>
+
+    <!-- SCRIPT JS PURO (INTERATIVIDADES) -->
+    <script>
+        // Menu Mobile Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // FAQ Accordion Interativo
+        const faqToggles = document.querySelectorAll('.faq-toggle');
+
+        faqToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const content = toggle.nextElementSibling;
+                const icon = toggle.querySelector('i');
+
+                // Fecha outros abertos
+                document.querySelectorAll('.faq-content').forEach(item => {
+                    if (item !== content) {
+                        item.classList.add('hidden');
+                        item.previousElementSibling.querySelector('i').classList.remove('rotate-180');
+                    }
+                });
+
+                // Toggle no atual
+                content.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+    </script>
+</body>
+</html>
