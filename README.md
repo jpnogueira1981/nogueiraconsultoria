@@ -4,6 +4,8 @@ Landing page institucional e de alta conversão desenvolvida para a **Nogueira C
 
 O design foi rigorosamente inspirado na identidade visual do cartão de visita do escritório, utilizando uma paleta sofisticada em **Azul Marinho Real** e **Dourado Ouro**, além do emblema vetorial exclusivo (balança e monograma).
 
+🔗 **Acesse o site oficial:** [https://nogueiraconsultoria.netlify.app/](https://nogueiraconsultoria.netlify.app/)
+
 ---
 
 ## 🚀 Principais Funcionalidades
